@@ -1,5 +1,53 @@
 ﻿namespace NN2
 {
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int inputSize = 10;
+            int hiddenSize = 100;
+            int outputSize = 5;
+
+            NeuralNetwork network = new NeuralNetwork(inputSize, hiddenSize, outputSize);
+
+            // Randomly set input values for demonstration
+            Random rand = new Random();
+            for (int i = 0; i < network.InputLayer.Length; i++)
+            {
+                network.InputLayer[i] = rand.NextDouble(); // Random input
+            }
+
+            // Initialize target values for backpropagation with random values
+            for (int i = 0; i < network.Target.Length; i++)
+            {
+                network.Target[i] = rand.NextDouble(); // Random target values
+            }
+
+            // Run the feedforward computation
+            while (true)
+            {
+                network.Feedforward();
+                Console.WriteLine("Feedforward Output:");
+                for (int i = 0; i < network.OutputLayer.Length; i++)
+                {
+                    Console.WriteLine($"Target {i + 1}: {network.Target[i]}");
+                    Console.WriteLine($"Output {i + 1}: {network.OutputLayer[i]}");
+                }
+                Console.WriteLine("**********************************");
+                // Perform backpropagation to adjust weights based on target values
+                network.Backpropagation();
+                for (int i = 0; i < network.OutputLayer.Length; i++)
+                {
+                    Console.WriteLine($"Target {i + 1}: {network.Target[i]}");
+                    Console.WriteLine($"Output {i + 1}: {network.OutputLayer[i]}");
+                }
+                Thread.Sleep(500);
+            }
+            Console.WriteLine("Performed backpropagation.");
+
+            // Optionally, you can run feedforward again to see changes if you loop the process
+        }
+    }
     public class NeuralNetwork
     {
         public double[,] WeightsInputHidden;  // Input to Hidden Weights

@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NN2", "NN2\NN2.csproj", "{0
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CombinNNandDjistra", "CombinNNandDjistra\CombinNNandDjistra.csproj", "{B911A160-671F-4AC8-B0D9-DB630AA21EF3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IntegratedNeuralDijkstra", "IntegratedNeuralDijkstra\IntegratedNeuralDijkstra.csproj", "{7C996613-4209-44F5-85FB-C88130B4B7D8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{B911A160-671F-4AC8-B0D9-DB630AA21EF3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B911A160-671F-4AC8-B0D9-DB630AA21EF3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B911A160-671F-4AC8-B0D9-DB630AA21EF3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7C996613-4209-44F5-85FB-C88130B4B7D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C996613-4209-44F5-85FB-C88130B4B7D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C996613-4209-44F5-85FB-C88130B4B7D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C996613-4209-44F5-85FB-C88130B4B7D8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
